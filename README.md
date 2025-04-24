@@ -14,40 +14,6 @@ A Java library for handling complex numbers with full support for trigonometric 
 
 You can download the JAR from the [Releases](https://github.com/emilioheringer/JavaComplexLib/releases) page or use a build system like **Gradle** or **Maven**.
 
-### ✅ Gradle
-
-```gradle
-dependencyResolutionManagement {
-    repositoriesMode.set(RepositoriesMode.FAIL_ON_PROJECT_REPOS)
-    repositories {
-        mavenCentral()
-        maven { url 'https://jitpack.io' }
-    }
-}
-
-dependencies {
-    implementation 'com.github.emilioheringer:JavaComplexLib:1.0.0'
-}
-```
-
-### ✅ Maven
-
-```xml
-<repositories>
-    <repository>
-        <id>jitpack.io</id>
-        <url>https://jitpack.io</url>
-    </repository>
-</repositories>
-
-<dependency>
-    <groupId>com.github.emilioheringer</groupId>
-    <artifactId>JavaComplexLib</artifactId>
-    <version>1.0.0</version>
-</dependency>
-```
-
-## 🧪 Example Usage
 
 ```java
 import com.heringer.Complex;
