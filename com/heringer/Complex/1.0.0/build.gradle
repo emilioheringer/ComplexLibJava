@@ -10,13 +10,28 @@ publishing {
     publications {
         mavenJava(MavenPublication) {
             from components.java
+
+            pom {
+                name = 'ComplexLib'
+                description = 'Biblioteca de exemplo ComplexLib'
+                url = 'https://github.com/emilioheringer/ComplexLibJava'
+
+                licenses {
+                    license {
+                        name = 'Apache License, Version 2.0'
+                        url = 'http://www.apache.org/licenses/LICENSE-2.0'
+                    }
+                }
+            }
         }
     }
 
     repositories {
         maven {
-            name = "localRepo"
-            url = uri("../ComplexLibRepo") // pasta local temporária
+            name = "GitHubRepo"
+            // URL bruta do seu repositório GitHub
+            url = uri("https://raw.githubusercontent.com/emilioheringer/ComplexLibJava/main/com/heringer/Complex/1.0.0")
         }
     }
 }
+
