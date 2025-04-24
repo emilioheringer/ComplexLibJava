@@ -1,0 +1,22 @@
+plugins {
+    id 'java'
+    id 'maven-publish'
+}
+
+group = 'com.heringer'
+version = '1.0.0'
+
+publishing {
+    publications {
+        mavenJava(MavenPublication) {
+            from components.java
+        }
+    }
+
+    repositories {
+        maven {
+            name = "localRepo"
+            url = uri("../ComplexLibRepo") // pasta local temporária
+        }
+    }
+}
